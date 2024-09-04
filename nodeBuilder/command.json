@@ -2,5 +2,9 @@
     "test": {
         "path": "./build.js",
         "function": "test"
+    },
+    "init": {
+        "path": "./build.js",
+        "function": "init"
     }
 }

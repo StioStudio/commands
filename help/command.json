@@ -1,0 +1,6 @@
+{
+    "please": {
+        "path": "./help.js",
+        "function": "please"
+    }
+}

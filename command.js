@@ -8,6 +8,12 @@ const rl = readline.createInterface({
     output: process.stdout,
 });
 
+rl.write(`
+>>> Command line <<<
+Type "help please" for a list of commands and tips
+
+`)
+
 async function runTime() {
     const line = await new Promise((resolve, reject) => {
         rl.question(`> `, line => {
@@ -32,7 +38,7 @@ async function runTime() {
         
         if (moduleObj.function) {
             const module = await import(fullPath)
-            await module[moduleObj.function]({ rl, line, commands, args })
+            await module[moduleObj.function]({ rl, line, commands, fullArgs: args, args: args.slice(i + 1), command: args.slice(0, i) })
             
             return true
         }
