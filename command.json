@@ -1,0 +1,9 @@
+{
+    "say": {
+        "path": "./console.js",
+        "function": "main"
+    },
+    "build": {
+        "path": "./nodeBuilder/"
+    }
+}
